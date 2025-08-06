@@ -27,11 +27,11 @@ const QuantumChatApp = ({ auth }) => {
   const endRef = useRef(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/users")
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
       .then((res) => setUsers(res.data.filter((u) => u.username !== me)))
       .catch(console.error);
 
-    axios.get("http://localhost:3001/groups", { params: { user: me } })
+    axios.get(`${import.meta.env.VITE_API_URL}/groups`, { params: { user: me } })
       .then((res) => setGroups(res.data))
       .catch(console.error);
   }, [me]);
@@ -44,7 +44,7 @@ const QuantumChatApp = ({ auth }) => {
         ? { group: activeGroup }
         : { from: me, to: to ? simulateKyberAesDecrypt(to) : null };
 
-      axios.get("http://localhost:3001/messages", { params })
+      axios.get(`${import.meta.env.VITE_API_URL}/messages`, { params })
         .then((res) => setMsgs(res.data))
         .catch(console.error);
     };
@@ -64,7 +64,7 @@ const QuantumChatApp = ({ auth }) => {
       ? { from: me, group: activeGroup, message: encrypted }
       : { from: me, to: to ? simulateKyberAesDecrypt(to) : null, message: encrypted };
 
-    axios.post("http://localhost:3001/send", payload)
+    axios.post(`${import.meta.env.VITE_API_URL}/send`, payload)
       .then(() => {
         setText("");
         setFile(null);
@@ -77,7 +77,7 @@ const QuantumChatApp = ({ auth }) => {
     if (file) {
       const fd = new FormData();
       fd.append("file", file);
-      axios.post("http://localhost:3001/upload", fd)
+      axios.post(`${import.meta.env.VITE_API_URL}/upload`, fd)
         .then((r) => push(`📎 File: ${r.data.url}`))
         .catch(console.error);
     } else {
@@ -94,7 +94,7 @@ const QuantumChatApp = ({ auth }) => {
     const groupName = prompt("Enter new group name:");
     if (!groupName) return;
     const members = prompt("Enter usernames to add (comma-separated):");
-    axios.post("http://localhost:3001/groups", {
+    axios.post(`${import.meta.env.VITE_API_URL}/groups`, {
       name: groupName,
       members: [me, ...members.split(",").map((m) => m.trim())],
     })

@@ -17,7 +17,7 @@ const LoginPage = ({ setPendingUser, setAuth }) => {
       const encryptedUsername = simulateKyberAesEncrypt(username);
       const encryptedPassword = simulateKyberAesEncrypt(password);
 
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -32,7 +32,7 @@ const LoginPage = ({ setPendingUser, setAuth }) => {
       }
 
       // 🔐 Also use encrypted username to trigger OTP
-      const otpRes = await fetch("http://localhost:3001/resend-otp", {
+      const otpRes = await fetch(`${import.meta.env.VITE_API_URL}/resend-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: encryptedUsername }),

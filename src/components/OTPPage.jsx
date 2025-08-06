@@ -31,7 +31,7 @@ export default function OTPPage({ pendingUser, setAuth, setPendingUser }) {
     setInfo(null);
 
     try {
-      const res = await fetch("http://localhost:3001/verify-otp", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: pendingUser, otp: otp.trim() }),
@@ -59,7 +59,7 @@ export default function OTPPage({ pendingUser, setAuth, setPendingUser }) {
     setInfo(null);
 
     try {
-      const res = await fetch("http://localhost:3001/resend-otp", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/resend-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: pendingUser }),
