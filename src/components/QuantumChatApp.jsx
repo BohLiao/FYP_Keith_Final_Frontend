@@ -204,7 +204,7 @@ const QuantumChatApp = ({ auth }) => {
                   ) : isHacker ? (
                     hideEnc ? "[Encrypted hidden]" : m.message
                   ) : (
-                    `${m.from === me ? "You: " : "Them: "}${simulateKyberAesDecrypt(m.message)}`
+                    `${m.sender === me ? "You: " : "${m.receiver}"}${simulateKyberAesDecrypt(m.message)}`
                   )}
                 </motion.div>
               ))}
