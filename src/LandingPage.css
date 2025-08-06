@@ -1,0 +1,608 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+/* Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 255, 231, 0.08);
+  border-bottom: 1px solid #00ffe7;
+}
+
+.sticky-nav a {
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.sticky-nav a:hover {
+  color: #00cccc;
+  border-bottom: 2px solid #00ffe7;
+}
+
+/* Hero Header */
+.hero-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #111;
+  border-bottom: 1px solid #00ffe7;
+}
+
+.brand-title {
+  font-size: 3rem;
+  color: #00ffe7;
+  text-shadow: 0 0 4px #00ffe7;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+.cta-buttons button {
+  margin: 1rem 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00ffe7;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons button:hover {
+  background: #00cccc;
+  transform: translateY(-2px);
+}
+
+/* Section Styles */
+section {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #00ffe7;
+  margin-bottom: 1.5rem;
+}
+
+ul.roadmap li,
+ul.key-benefits li {
+  font-size: 1rem;
+  margin: 0.75rem auto;
+  list-style: none;
+  max-width: 600px;
+  position: relative;
+  padding-left: 1.5rem;
+  text-align: justify;
+}
+
+ul li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: #00ffe7;
+}
+
+/* Neon Effects */
+.neon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.neon-glow {
+  border-radius: 12px;
+  box-shadow: 0 0 6px #00ffe7, 0 0 12px #00ffe7;
+  max-width: 100%;
+  width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.neon-glow:hover {
+  transform: scale(1.015);
+}
+
+/* Real-Time Hacks */
+.hacks-today {
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.hack-count {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff4d4d;
+}
+
+/* Test Section Buttons */
+.test-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.test-description {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.primary-button.no-emoji {
+  background: #00d4ff;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button.no-emoji:hover {
+  background: #00a8cc;
+}
+
+/* FAQ */
+.faq {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq h4 {
+  color: #00ffe7;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq p {
+  font-size: 0.8rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Team */
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: #181818;
+  padding: 1rem;
+  border: 1px solid #00ffe7;
+  border-radius: 10px;
+  max-width: 180px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #00ffe7;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #00ffe7;
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  color: #00ffe7;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  background: #0d0d0d;
+}
+
+/* Animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cards Row */
+.card-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.download-card {
+  background: #181818;
+  border: 1px solid #00ffe7;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 22%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  color: #00ffe7;
+}
+
+.download-card:hover {
+  box-shadow: 0 0 12px #00ffe7;
+  transform: translateY(-5px);
+}
+
+.download-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.download-card a {
+  color: #00ffe7;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.download-card a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Poster & Video Fix Section */
+section#media h2 {
+  font-size: 2.25rem;
+  color: #00ffe7;
+  text-shadow: 0 0 6px #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.media-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.media-card {
+  flex: 1 1 320px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.portrait-image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 177.77%; /* 9:16 portrait ratio */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 🔄 change from contain to cover */
+  border: none;
+}
+
+/* Optional loading overlay before video loads */
+.video-wrapper.loading::before {
+  content: "Loading video...";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  z-index: 1;
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .card-row {
+    flex-wrap: wrap;
+  }
+
+  .download-card {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sticky-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .cta-buttons button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-row {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .download-card {
+    width: 100%;
+  }
+
+  .media-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Atom Animation */
+.animated-atom {
+  display: block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.glow-nucleus {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.orbit-group {
+  transform-origin: 60px 60px;
+  animation: rotate 5s linear infinite;
+}
+
+.orbit-group.delay {
+  animation-delay: 0.5s;
+}
+
+.orbit-group.delay-2 {
+  animation-delay: 1s;
+}
+
+.electron {
+  animation: orbitElectron 5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitElectron {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { r: 6; opacity: 1; }
+  50% { r: 8; opacity: 0.6; }
+}
+
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.crypto-card {
+  background: #111;
+  border: 1px solid #00ffe7;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.crypto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.3);
+}
+
+.crypto-card h3 {
+  color: #00ffe7;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.crypto-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dropdown {
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.dropdown-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00ffe7;
+  cursor: pointer;
+}
+
+/* Slideshow section base */
+.crypto-section.slideshow {
+  padding: 4rem 1rem;
+  background: #0b0b0b;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffe7;
+}
+
+.slide-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 250px;
+  padding-bottom: 4rem; /* Make space for buttons */
+  overflow: hidden;
+}
+
+/* Card styling */
+.crypto-card {
+  background-color: #111;
+  border: 1px solid #00ffe7;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.1);
+  color: #e0e0e0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.crypto-card h3 {
+  font-size: 1.5rem;
+  color: #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.crypto-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* Fix overlapping issue */
+.slide-buttons {
+  position: relative; /* was: absolute */
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.slide-buttons button {
+  background-color: #00ffe7;
+  color: #000;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.6rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 231, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.slide-buttons button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+}
