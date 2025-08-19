@@ -155,19 +155,19 @@ export default function LandingPage() {
         <section id="slides" className="scroll-animate animate-slide">
           <h2>Download Slides</h2>
           <div className="card-row">
-            <a href="/backend/public/assets/Introduction to Quantum Computing.pdf" download className="download-card">
+            <a href="/frontend/public/assets/intro.pptx" download className="download-card">
               {renderAnimatedAtom('#00ffe7')}
               <span>Intro to QC</span>
             </a>
-            <a href="/backend/public/assets/PQC & Cybersecurity Use Cases.pdf" download className="download-card">
+            <a href="/frontend/public/assets/PQC.pptx" download className="download-card">
               {renderAnimatedAtom('#d94fff')}
               <span>PQC & Use Cases</span>
             </a>
-            <a href="/backend/public/assets/Quantum Algorithms & Cryptographic Impact.pdf" download className="download-card">
+            <a href="/frontend/public/assets/Algorithms & Encryption.pptx" download className="download-card">
               {renderAnimatedAtom('#00aaff')}
               <span>QC Algorithms</span>
             </a>
-            <a href="/backend/public/assets/Quantum Computing Models.pdf" download className="download-card">
+            <a href="/frontend/public/assets/models.pptx" download className="download-card">
               {renderAnimatedAtom('#ffaa33')}
               <span>QC Models</span>
             </a>
@@ -177,19 +177,19 @@ export default function LandingPage() {
            <section id="kahoot" className="scroll-animate animate-slide">
           <h2>Open Kahoot</h2>
           <div className="card-row">
-            <a href="/backend/public/assets/Introduction to Quantum Computing.pdf" download className="download-card">
+            <a href="/frontend/public/assets/Introduction to Quantum Computing.pdf" download className="download-card">
               {renderAnimatedAtom('#00ffe7')}
               <span>Intro to QC</span>
             </a>
-            <a href="/backend/public/assets/PQC & Cybersecurity Use Cases.pdf" download className="download-card">
+            <a href="/frontend/public/assets/PQC & Cybersecurity Use Cases.pdf" download className="download-card">
               {renderAnimatedAtom('#d94fff')}
               <span>PQC & Use Cases</span>
             </a>
-            <a href="/backend/public/assets/Quantum Algorithms & Cryptographic Impact.pdf" download className="download-card">
+            <a href="/frontend/public/assets/Quantum Algorithms & Cryptographic Impact.pdf" download className="download-card">
               {renderAnimatedAtom('#00aaff')}
               <span>QC Algorithms</span>
             </a>
-            <a href="/backend/public/assets/Quantum Computing Models.pdf" download className="download-card">
+            <a href="/frontend/public/assets/Quantum Computing Models.pdf" download className="download-card">
               {renderAnimatedAtom('#ffaa33')}
               <span>QC Models</span>
             </a>
