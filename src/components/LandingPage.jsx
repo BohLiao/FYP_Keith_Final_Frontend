@@ -177,19 +177,19 @@ export default function LandingPage() {
            <section id="kahoot" className="scroll-animate animate-slide">
           <h2>Open Kahoot</h2>
           <div className="card-row">
-            <a href="/frontend/public/assets/Introduction to Quantum Computing.pdf" download className="download-card">
+            <a href="https://create.kahoot.it/share/intro-to-quantum-computing/6e777d4a-0cf0-4ed0-a2c5-a4021eda8e65" download className="download-card">
               {renderAnimatedAtom('#00ffe7')}
               <span>Intro to QC</span>
             </a>
-            <a href="/frontend/public/assets/PQC & Cybersecurity Use Cases.pdf" download className="download-card">
+            <a href="https://create.kahoot.it/share/quantum-computing-pqc/a74fb93c-07d6-47e8-878a-e7914f86a333" download className="download-card">
               {renderAnimatedAtom('#d94fff')}
               <span>PQC & Use Cases</span>
             </a>
-            <a href="/frontend/public/assets/Quantum Algorithms & Cryptographic Impact.pdf" download className="download-card">
+            <a href="https://create.kahoot.it/share/quantum-computing-algorithms/a4cc8fbc-bf1d-4852-89b7-ffdd3ccabaca" download className="download-card">
               {renderAnimatedAtom('#00aaff')}
               <span>QC Algorithms</span>
             </a>
-            <a href="/frontend/public/assets/Quantum Computing Models.pdf" download className="download-card">
+            <a href="https://create.kahoot.it/share/quantum-computing-models/1bad2aa4-9782-48c0-99bf-52a3dc37add6" download className="download-card">
               {renderAnimatedAtom('#ffaa33')}
               <span>QC Models</span>
             </a>
