@@ -76,7 +76,6 @@ body,
   letter-spacing: 0.05em;
 }
 
-
 .qca-contacts-list {
   display: flex;
   flex-direction: column;
@@ -163,7 +162,8 @@ body,
   display: none;
 }
 
-.qca-chat-file-link {
+.qca-chat-file-link,
+.qca-bubble a {
   display: inline-block;
   max-width: 220px;
   overflow: hidden;
@@ -192,4 +192,50 @@ body,
 
 .qca-signout-wrapper button:hover {
   background-color: #00ffe733;
+}
+
+/* --- WhatsApp-like message alignment --- */
+.qca-msg-row {
+  display: flex;
+  width: 100%;
+}
+
+.qca-msg-row.mine {
+  justify-content: flex-end;   /* my messages to the right */
+}
+
+.qca-msg-row.theirs {
+  justify-content: flex-start; /* others to the left */
+}
+
+.qca-bubble {
+  max-width: 68%;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.35rem;
+  border: 1px solid #00ffe5a0;
+  box-shadow: 0 2px 6px rgba(0, 255, 231, 0.12);
+  word-break: break-word;
+}
+
+/* My bubble (right, teal-ish) */
+.qca-bubble.mine {
+  background: #0b3a36;                 /* subtle teal */
+  color: #e8fffc;
+  border-radius: 14px 14px 4px 14px;   /* small 'tail' on left-bottom */
+}
+
+/* Their bubble (left, dark) */
+.qca-bubble.theirs {
+  background: #141414;
+  color: #cafff8;
+  border-radius: 14px 14px 14px 4px;   /* small 'tail' on right-bottom */
+}
+
+/* Optional tiny meta (sender, etc.) */
+.qca-bubble .qca-meta {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  opacity: 0.7;
 }
