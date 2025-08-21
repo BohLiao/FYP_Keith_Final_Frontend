@@ -1,3 +1,8 @@
+/* =========================================================
+   S P E C T R A L I N K  –  LandingPage.css (Consolidated)
+   Safe to paste/replace. No selector clashes. Scoped extras.
+   ========================================================= */
+
 /* Reset */
 * {
   margin: 0;
@@ -26,7 +31,9 @@ html, body, #root {
   flex-grow: 1;
 }
 
-/* Navigation */
+/* =======================
+   Navigation (Sticky Top)
+   ======================= */
 .sticky-nav {
   position: sticky;
   top: 0;
@@ -54,7 +61,9 @@ html, body, #root {
   border-bottom: 2px solid #00ffe7;
 }
 
-/* Hero Header */
+/* =============
+   Hero Header
+   ============= */
 .hero-header {
   text-align: center;
   padding: 3rem 1rem;
@@ -93,7 +102,9 @@ html, body, #root {
   transform: translateY(-2px);
 }
 
-/* Section Styles */
+/* =================
+   Section Defaults
+   ================= */
 section {
   padding: 3rem 1rem;
   border-bottom: 1px solid #222;
@@ -124,7 +135,9 @@ ul li::before {
   color: #00ffe7;
 }
 
-/* Neon Effects */
+/* ============
+   Neon Bits
+   ============ */
 .neon-box {
   display: flex;
   justify-content: center;
@@ -144,7 +157,9 @@ ul li::before {
   transform: scale(1.015);
 }
 
-/* Real-Time Hacks */
+/* =====================
+   Real-Time Hacks card
+   ===================== */
 .hacks-today {
   border-radius: 12px;
   padding: 2rem;
@@ -156,7 +171,9 @@ ul li::before {
   color: #ff4d4d;
 }
 
-/* Test Section Buttons */
+/* =========================
+   Test Section Buttons/CTAs
+   ========================= */
 .test-buttons {
   display: flex;
   justify-content: center;
@@ -185,16 +202,16 @@ ul li::before {
   background: #00a8cc;
 }
 
-/* FAQ */
+/* =====
+   FAQ
+   ===== */
 .faq {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
 }
 
-.faq-item {
-  margin-bottom: 2rem;
-}
+.faq-item { margin-bottom: 2rem; }
 
 .faq h4 {
   color: #00ffe7;
@@ -208,7 +225,9 @@ ul li::before {
   line-height: 1.6;
 }
 
-/* Team */
+/* ======
+   Team
+   ====== */
 .team-cards {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +269,9 @@ ul li::before {
   color: #ccc;
 }
 
-/* Footer */
+/* =======
+   Footer
+   ======= */
 .footer {
   padding: 2rem;
   text-align: center;
@@ -259,7 +280,9 @@ ul li::before {
   background: #0d0d0d;
 }
 
-/* Animations */
+/* =================
+   Scroll Animations
+   ================= */
 .scroll-animate {
   opacity: 0;
   transform: translateY(30px);
@@ -271,7 +294,9 @@ ul li::before {
   transform: none;
 }
 
-/* Cards Row */
+/* ===========
+   Card Row
+   =========== */
 .card-row {
   display: flex;
   justify-content: center;
@@ -318,11 +343,11 @@ ul li::before {
   text-decoration: none;
 }
 
-.download-card a:hover {
-  text-decoration: underline;
-}
+.download-card a:hover { text-decoration: underline; }
 
-/* ✅ Poster & Video Fix Section */
+/* ===========================
+   Poster & Video ("media")
+   =========================== */
 section#media h2 {
   font-size: 2.25rem;
   color: #00ffe7;
@@ -368,7 +393,7 @@ section#media h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* 🔄 change from contain to cover */
+  object-fit: cover;  /* fill frame nicely */
   border: none;
 }
 
@@ -387,24 +412,16 @@ section#media h2 {
 }
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
-/* Media Queries */
+/* =================
+   Responsive Layout
+   ================= */
 @media (max-width: 1024px) {
-  .card-row {
-    flex-wrap: wrap;
-  }
-
-  .download-card {
-    width: 45%;
-    margin-bottom: 1rem;
-  }
+  .card-row { flex-wrap: wrap; }
+  .download-card { width: 45%; margin-bottom: 1rem; }
 }
 
 @media (max-width: 600px) {
@@ -419,71 +436,48 @@ section#media h2 {
     margin-bottom: 1rem;
   }
 
-  .team-cards {
-    flex-direction: column;
-    align-items: center;
-  }
+  .team-cards { flex-direction: column; align-items: center; }
 
-  .card-row {
-    flex-direction: column;
-    max-width: 90%;
-  }
+  .card-row { flex-direction: column; max-width: 90%; }
+  .download-card { width: 100%; }
 
-  .download-card {
-    width: 100%;
-  }
-
-  .media-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+  .media-grid { flex-direction: column; align-items: center; }
 }
 
-/* Atom Animation */
+/* ==================
+   Atom Illustration
+   ================== */
 .animated-atom {
   display: block;
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 6px currentColor);
 }
 
-.glow-nucleus {
-  animation: pulse 2s ease-in-out infinite;
-}
+.glow-nucleus { animation: pulse 2s ease-in-out infinite; }
 
 .orbit-group {
   transform-origin: 60px 60px;
   animation: rotate 5s linear infinite;
 }
+.orbit-group.delay { animation-delay: 0.5s; }
+.orbit-group.delay-2 { animation-delay: 1s; }
 
-.orbit-group.delay {
-  animation-delay: 0.5s;
-}
+.electron { animation: orbitElectron 5s linear infinite; }
 
-.orbit-group.delay-2 {
-  animation-delay: 1s;
-}
-
-.electron {
-  animation: orbitElectron 5s linear infinite;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+@keyframes rotate { 100% { transform: rotate(360deg); } }
 @keyframes orbitElectron {
   0% { transform: translateX(0); }
   50% { transform: translateX(5px); }
   100% { transform: translateX(0); }
 }
-
 @keyframes pulse {
   0%, 100% { r: 6; opacity: 1; }
   50% { r: 8; opacity: 0.6; }
 }
 
+/* ==========================
+   Generic Crypto Card Grid
+   ========================== */
 .crypto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -497,7 +491,7 @@ section#media h2 {
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 255, 231, 0.15);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .crypto-card:hover {
@@ -517,79 +511,64 @@ section#media h2 {
   line-height: 1.5;
 }
 
-.dropdown {
-  background-color: #111;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #00ffe7;
-  margin-bottom: 1rem;
-}
-
-.dropdown-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #00ffe7;
-  cursor: pointer;
-}
-
-/* Slideshow section base */
+/* =========================================
+   Slideshow section (scoped to .slideshow)
+   ========================================= */
 .crypto-section.slideshow {
   padding: 4rem 1rem;
   background: #0b0b0b;
   text-align: center;
 }
 
-.section-title {
+.crypto-section.slideshow .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #00ffe7;
 }
 
-.slide-container {
+/* Avoid clashes: only these cards animate within slideshow */
+.crypto-section.slideshow .slide-container {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
   min-height: 250px;
-  padding-bottom: 4rem; /* Make space for buttons */
+  padding-bottom: 4rem; /* space for buttons */
   overflow: hidden;
 }
 
-/* Card styling */
-.crypto-card {
+.crypto-section.slideshow .crypto-card {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: #111;
   border: 1px solid #00ffe7;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 255, 231, 0.1);
   color: #e0e0e0;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 
-.crypto-card h3 {
+.crypto-section.slideshow .crypto-card h3 {
   font-size: 1.5rem;
   color: #00ffe7;
   margin-bottom: 1rem;
 }
 
-.crypto-card p {
+.crypto-section.slideshow .crypto-card p {
   font-size: 1rem;
   line-height: 1.6;
 }
 
-
-/* Fix overlapping issue */
-.slide-buttons {
-  position: relative; /* was: absolute */
+.crypto-section.slideshow .slide-buttons {
+  position: relative; /* not absolute */
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
-.slide-buttons button {
+.crypto-section.slideshow .slide-buttons button {
   background-color: #00ffe7;
   color: #000;
   font-size: 1.1rem;
@@ -602,7 +581,93 @@ section#media h2 {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.slide-buttons button:hover {
+.crypto-section.slideshow .slide-buttons button:hover {
   background-color: #00cccc;
   transform: scale(1.05);
+}
+
+/* ==========================================
+   NEW: What / Why / AES+Kyber Flow Sections
+   ========================================== */
+
+/* What & Why layout */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.info-card {
+  background: #111;
+  border: 1px solid #00ffe7;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,255,231,0.12);
+}
+
+.info-card h3 {
+  color: #00ffe7;
+  margin-bottom: 0.5rem;
+}
+
+/* small CTA links between sections */
+.mini-cta { margin-top: 1rem; }
+.link-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffe7;
+  color: #00ffe7;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link-button:hover { background: #00ffe710; }
+
+/* AES + Kyber flow */
+#flow .flow-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 0.75rem;
+  max-width: 1100px;
+  margin: 0 auto 1.25rem;
+}
+
+#flow .flow-step {
+  background: #111;
+  border: 1px solid #00ffe7;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(0,255,231,0.15);
+}
+
+#flow .flow-step h4 {
+  color: #00ffe7;
+  margin-bottom: 0.4rem;
+}
+
+#flow .flow-arrow {
+  align-self: center;
+  color: #00ffe7;
+  font-size: 1.8rem;
+  padding: 0 0.25rem;
+  text-shadow: 0 0 6px #00ffe7;
+}
+
+#flow .mini-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: #00ffe7;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* Responsive flow */
+@media (max-width: 900px) {
+  #flow .flow-wrap { grid-template-columns: 1fr; }
+  #flow .flow-arrow { display: none; }
 }
